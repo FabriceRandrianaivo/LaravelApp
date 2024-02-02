@@ -3,7 +3,7 @@
 @section('title','Acceuil du blog')
     
 @section('content')
-    <h1>Ma premiere page</h1>
+    <h1>Listes des objets</h1>
     @foreach($posts as $post)
         <article>
             <h2>{{$post-> title}}</h2>
@@ -11,7 +11,7 @@
                 {{$post -> content}}
             </p>
             <p>
-                <a href="{{route('home.article',['slug' => $post-> slug, 'id' => $post -> id])}}", class="btn btn-primary">Suivant</a>
+                <a href="{{route('home.article',['slug' => $post-> slug, 'id' => $post -> id])}}", class="btn btn-primary">Lire la suite</a>
             </p>
             <!--p>
                 {{$post -> id,}}

@@ -6,17 +6,22 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <style>
-        /*body{
-            background-color: grey;
-        }*/
+        body{
+            background-color: rgb(25, 12, 0);
+            color: white; 
+        }
+        article{
+            text-align: center;
+            margin: 0% 20% ;
+        }
     </style>
 </head>
 <body>    
     @php
         $route = request()->route()->getName();
     @endphp
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="#">Mywebsite</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="/">Mywebsite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,5 +39,6 @@
     <div class="container">
         @yield('content')     
     </div>
+
 </body>
 </html>

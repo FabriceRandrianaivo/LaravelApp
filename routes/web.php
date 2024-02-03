@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
 });
 
@@ -25,7 +26,7 @@ Route::prefix('/mysite')->name('home.')->controller(PostController::class)->grou
     
     Route::get('/{slug}-{id}', 'article')->where([
         'id' => '[0-9]+',
-        'slug' => '[a-z0-9\-]+'
+        'slug' => '[a-z0-9\-]+$'
     ])->name('article');
 });
  

@@ -20,6 +20,7 @@
                 {{$post -> slug,}}      
                 <br>
 b            </p -->
+            <p>Status: {{($post ->title)? "En stock" : "No disponible"}} </p>
         </article>
         
     @endforeach

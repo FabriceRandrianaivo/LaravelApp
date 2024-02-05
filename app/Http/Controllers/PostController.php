@@ -16,7 +16,7 @@ use Illuminate\Validation\Rule;
 class PostController extends Controller
 {
     public function index(BlogFilterRequest $request): View {
-        dd($request -> validated());
+        //dd($request -> validated());
         /** Test d'ajout de donner  */
         /* 
         $post = new Post();
